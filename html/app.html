@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InspoCanvas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    #result {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #5c6bc0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3f51b5;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 InspoCanvas</h1>
+  <button onclick="generateInspiration()">Generate Inspiration</button>
+  <div id="result"></div>
+
+  <script>
+    const themes = ["Time Travel", "Nostalgia", "Underwater City", "Lost Civilizations", "Digital Dreams"];
+    const styles = ["Cyberpunk", "Minimalist", "Shakespearean", "Impressionist", "Surrealist"];
+    const mediums = ["Short Story", "Comic Strip", "Poster Design", "Sculpture", "Animation"];
+
+    function generateInspiration() {
+      const theme = themes[Math.floor(Math.random() * themes.length)];
+      const style = styles[Math.floor(Math.random() * styles.length)];
+      const medium = mediums[Math.floor(Math.random() * mediums.length)];
+
+      const idea = `
+        <strong>Theme:</strong> ${theme}<br>
+        <strong>Style:</strong> ${style}<br>
+        <strong>Medium:</strong> ${medium}<br><br>
+        <em>Prompt:</em> Create a ${medium.toLowerCase()} about <strong>${theme.toLowerCase()}</strong> in the style of <strong>${style.toLowerCase()}</strong>.
+      `;
+
+      document.getElementById("result").innerHTML = idea;
+    }
+  </script>
+</body>
+</html>

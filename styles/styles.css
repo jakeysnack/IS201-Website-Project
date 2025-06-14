@@ -1,0 +1,56 @@
+
+body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: gray;
+            background-color: yellow
+
+}
+li {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 20px;
+            color: black;
+            font-weight: normal;
+}
+a {color: red;
+text-decoration: none;}
+a:hover {
+    text-decoration: underline;
+    /* font-weight: bold;
+    font-size: 20px; */
+}
+a:visited {
+    color: black;
+}
+.resumelistheading {
+            font-weight: bold;
+            font-style: normal;
+}
+.underline {text-decoration: underline;}
+.bold {font-weight: bold;}
+.justify {text-align: justify;}
+.homebg { background-image: url(../images/climbing_the_rocks.jpg);
+        background-position: top right;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+}
+.box1 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: yellowgreen;
+
+    border: 1px solid red;
+}
+.box2 {
+    padding: 5px;
+}
+.box3{
+    margin: 50px
+}
+.home_page {
+    color: blue;
+    border: 5px solid black;
+    font-style: oblique;
+    font-weight: bolds;
+}
